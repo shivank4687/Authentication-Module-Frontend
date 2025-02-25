@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-
+import { signal, } from '@angular/core';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -10,4 +10,6 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'Authentication-Module';
+  count=signal(3);
+  
 }
