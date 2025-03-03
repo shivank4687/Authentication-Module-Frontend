@@ -1,0 +1,15 @@
+<div class="auth-container">
+    <h2>Sign Up</h2>
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+      <input type="text" placeholder="Full Name" formControlName="name">
+      <app-form-validation-message [control]="signupForm.get('name')"></app-form-validation-message>
+      <input type="email" placeholder="Email" formControlName="email">
+      <app-form-validation-message [control]="signupForm.get('email')"></app-form-validation-message>
+      <input type="password" placeholder="Password" formControlName="password">
+      <app-form-validation-message [control]="signupForm.get('password')"></app-form-validation-message>
+      <button type="submit" [disabled]="signupForm.invalid">Sign Up</button>
+      
+    </form>
+    <a routerLink="../login">Already have an account? Login</a>
+  </div>
+  
