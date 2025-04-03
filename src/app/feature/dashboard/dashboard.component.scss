@@ -1,0 +1,36 @@
+// .dashboard-wrapper{
+//     .card-wrapper{
+//             display: flex;
+//             width: 100%;
+//             gap: 15px;
+//             justify-content: space-around;
+//     }
+// }
+
+
+.dashboard-wrapper {
+    padding: 16px; // Add some padding around the dashboard
+  }
+  
+  .card-wrapper {
+    display: flex;
+    flex-wrap: wrap; // Allow cards to wrap into multiple rows
+    gap: 16px; // Add spacing between cards
+  }
+  
+  app-card {
+    flex: 1 1 calc(25% - 32px); // Adjust card width for 3 cards per row
+    box-sizing: border-box; // Ensure padding and border are included in the width
+  }
+  
+  @media (max-width: 768px) {
+    app-card {
+      flex: 1 1 calc(50% - 16px); // Adjust card width for 2 cards per row on smaller screens
+    }
+  }
+  
+  @media (max-width: 480px) {
+    app-card {
+      flex: 1 1 100%; // Adjust card width for 1 card per row on mobile screens
+    }
+  }

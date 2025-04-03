@@ -1,0 +1,28 @@
+<mat-sidenav-container class="layout-container">
+    <!-- Sidebar -->
+    <mat-sidenav  #sidenav 
+    [mode]="sidebar.mode" 
+    [fixedInViewport]="sidebar.fixed"
+    [disableClose]="sidebar.disableClose"
+    [opened]="isSidebarOpen">
+
+    <app-sidebar [isOpen]="isSidebarOpen"></app-sidebar>
+
+  </mat-sidenav>
+  
+    <!-- Main Content -->
+    <mat-sidenav-content class="content">
+      <!-- Header -->
+      <app-header (toggle)="toggleSidebar()"></app-header>
+  
+      <!-- Main Page Content -->
+      <div class="main-content" [@fadeAnimation]>
+        <app-breadcrumb [breadcrumbItems]="breadcrumbItems"></app-breadcrumb>
+        <router-outlet></router-outlet>
+      </div>
+  
+      <!-- Footer -->
+      <app-footer></app-footer>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  

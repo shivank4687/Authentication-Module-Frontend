@@ -1,0 +1,36 @@
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background-color: transparent;
+  
+    .breadcrumb-item {
+      display: flex;
+      align-items: center;
+      padding: 8px 12px;
+      cursor: pointer;
+      color: #007bff;
+      transition: color 0.3s ease;
+  
+      &:hover {
+        color: #0056b3;
+      }
+  
+      &.active {
+        color: #6c757d;
+        cursor: default;
+      }
+  
+      .material-icons {
+        margin-right: 8px;
+        font-size: 18px;
+      }
+    }
+  
+    .separator {
+      margin: 0 8px;
+      color: #6c757d;
+    }
+  }

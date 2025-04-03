@@ -1,0 +1,68 @@
+/* Filter Input */
+.filter-field {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  
+  /* Table */
+  table {
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  /* Pagination */
+  mat-paginator {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+  }
+  
+  /* Responsive Table */
+  @media (max-width: 600px) {
+    .mat-table {
+      border: 0;
+      vertical-align: middle;
+    }
+  
+    .mat-table caption {
+      font-size: 1em;
+    }
+  
+    .mat-table .mat-header-cell {
+      border: 10px solid;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+  
+    .mat-table .mat-row {
+      border-bottom: 5px solid #ddd;
+      display: block;
+    }
+  
+    .mat-table .mat-cell {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      font-size: 1em;
+      text-align: right;
+      padding: 8px;
+    }
+  
+    .mat-table .mat-cell:before {
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  
+    .mat-table .mat-cell:last-child {
+      border-bottom: 0;
+    }
+  
+    .mat-table .mat-cell:first-child {
+      margin-top: 16px;
+    }
+  }

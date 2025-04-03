@@ -1,0 +1,30 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <app-input *ngFor="let key of form_attributes"
+      [label]="config[key].label"
+      [type]="config[key].type"
+      [placeholder]="config[key].placeholder"
+      [control]="form.get(key)"
+    ></app-input>
+
+    <!-- <app-input
+      label="Email"
+      type="email"
+      placeholder="Enter your email"
+      [control]="form.get('email')"
+    ></app-input>
+
+    <app-input
+      label="Password"
+      type="password"
+      placeholder="Enter your password"
+      [control]="form.get('password')"
+    ></app-input> -->
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">
+      Submit
+    </button>
+    <a mat-raised-button routerLink="../" color="primary" >
+      cancel
+    </a>
+    
+  </form>

@@ -1,0 +1,27 @@
+
+
+
+mat-card {
+    width: 100%;
+    // @media (min-width: 600px) {
+    //   width: 50%;
+    // }
+    // @media (min-width: 900px) {
+    //   width: 33%;
+    // }
+  }
+
+//   mat-card {
+//     margin: 16px;
+//   }
+
+
+.centered-title{
+  
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 100%; /* Ensure the div takes full width */
+    margin-bottom: 30px; 
+  
+}

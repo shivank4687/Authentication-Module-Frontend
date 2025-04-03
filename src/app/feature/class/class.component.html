@@ -1,0 +1,28 @@
+
+<div class="header-action">
+  <app-link-button class="add-button" color="primary" position="right" routerLink="create" icon="add">
+    Create New
+  </app-link-button>
+</div>
+
+<div class="table-container">
+  <app-table
+[dataSource]="data"
+[columnDefinitions]="columns"
+[pageSizeOptions]="[5, 10, 25]"
+[pageSize]="10"
+>
+<!-- Custom Template for 'actions' Column -->
+<ng-template #actionsTemplate let-element>
+  <button mat-button (click)="edit(element)">Edit</button>
+  <button mat-button (click)="delete(element)">Delete</button>
+</ng-template>
+</app-table>
+</div>
+<!-- [data]="classes()" (edit)="editClass($event)" (delete)="deleteClass($event)" -->
+
+
+
+
+
+  <!-- <router-outlet></router-outlet> -->

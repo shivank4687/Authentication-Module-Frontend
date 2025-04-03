@@ -1,0 +1,13 @@
+@use '@angular/material' as mat;
+
+button {
+  &.mat-primary {
+    background-color: mat.get-color-from-palette($custom-primary, 500);
+  }
+  &.mat-accent {
+    background-color: mat.get-color-from-palette($custom-accent, 500);
+  }
+  &.mat-warn {
+    background-color: mat.get-color-from-palette($custom-warn, 500);
+  }
+}

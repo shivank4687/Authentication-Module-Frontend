@@ -1,0 +1,19 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <ng-container *ngFor="let item of breadcrumbItems; let last = last">
+        <li
+          class="breadcrumb-item"
+          [ngClass]="{ active: last }"
+          [@fadeInOut]
+          
+        >
+        <!-- (click)="navigateTo(item.url)" -->
+         <a [routerLink]="item.url">
+            <span *ngIf="item.icon" class="material-icons">{{ item.icon }}</span>
+            {{ item.label }}
+         </a>
+        </li>
+        <span *ngIf="!last" class="separator">/</span>
+      </ng-container>
+    </ol>
+  </nav>

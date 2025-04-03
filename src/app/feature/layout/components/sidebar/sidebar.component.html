@@ -1,0 +1,52 @@
+<!-- <mat-sidenav #sidenav mode="side" [opened]="isOpen" class="sidebar">
+    
+  </mat-sidenav>
+   -->
+
+<!-- 
+   <div class="sidebar">
+    <mat-toolbar class="sidebar-header">
+      <span>Admin Panel</span>
+    </mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item *ngFor="let item of menuItems" [routerLink]="item.url" (click)="closeSidebar()">{{item.title}}</a>
+      
+    </mat-nav-list>
+  </div> -->
+
+
+  <div class="sidebar">
+    <mat-toolbar class="sidebar-header">
+      <span>Admin Panel</span>
+    </mat-toolbar>
+    <mat-nav-list>
+      <ng-container *ngFor="let item of menuItems">
+        <!-- Menu Item with Submenu -->
+        <mat-expansion-panel *ngIf="item.children" class="submenu-panel">
+          <mat-expansion-panel-header>
+            <mat-panel-title>{{ item.title }}</mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <a
+              mat-list-item
+              *ngFor="let child of item.children"
+              [routerLink]="child.url"
+              (click)="closeSidebar()"
+            >
+              {{ child.title }}
+            </a>
+          </mat-nav-list>
+        </mat-expansion-panel>
+  
+        <!-- Regular Menu Item -->
+        <a
+          mat-list-item
+          *ngIf="!item.children"
+          [routerLink]="item.url"
+          (click)="closeSidebar()"
+        >
+          {{ item.title }}
+        </a>
+      </ng-container>
+    </mat-nav-list>
+  </div>

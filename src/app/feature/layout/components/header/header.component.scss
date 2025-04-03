@@ -1,0 +1,22 @@
+.header {
+  // position: fixed;
+  display: flex;
+  // width: 100%;
+  align-items: center;
+  padding: 0 16px;
+  background-color: #1976d2;
+  color: white;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.spacer {
+  flex: 1;
+}
+
